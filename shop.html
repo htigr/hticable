@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>HTI Global Resources</title>
+<title id="title_value">Loading...</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="HTI Global Resources ">
+<meta name="description" content="OneTech shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="styles/shop_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/shop_responsive.css">
 
 </head>
 
 <body>
-
-
-
 
 <div class="super_container">
 	
@@ -132,7 +129,7 @@
 								<!-- Content will be inserted via Javascript "google_spreadsheet.js" -->
 								
 							</div>
-
+							
 
 							<!-- Main Nav Menu -->
 
@@ -142,8 +139,7 @@
 									<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
 								</ul>
 							</div>
-
-
+	
 
 							<!-- Menu Trigger -->
 
@@ -190,74 +186,99 @@
 
 	</header>
 	
-	<!-- Banner -->
+	<!-- Home -->
 
-	<div class="banner">
-		<div class="banner_background" style="background-image:url(images/banner_background.jpg)"></div>
-		<div class="container fill_height">
-			<div class="row fill_height">
-				<div class="banner_product_image"><img class="floating" src="images/img-02.png" alt="" height="350"></div>
-				<div class="col-lg-5 offset-lg-4 fill_height">
-					<div class="banner_content">
-						<h1 class="banner_text">Our Complete Fiber Solution</h1>
-						<!-- <div class="banner_price"><span>$530</span>$460</div>
-						<div class="banner_product_name">Apple Iphone 6s</div> -->
-						<div class="button banner_button"><a href="shop.html?page=2">Shop Now</a></div>
-					</div>
-				</div>
-			</div>
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/shop_background.jpg"></div>
+		<div class="home_overlay"></div>
+		<div class="home_content d-flex flex-column align-items-center justify-content-center">
+			<h2 class="home_title" id="home_title_value">Loading...</h2>
 		</div>
 	</div>
 
+	<!-- Shop -->
 
-
-
-	<!-- Hot New Arrivals -->
-
-	<div class="new_arrivals">
+	<div class="shop">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<div class="tabbed_container">
-						<div class="tabs clearfix tabs-right">
-							<div class="new_arrivals_title">Hot New Arrivals</div>
-							<ul class="clearfix" id="new_arrival_categories">
-								<!-- to be filled by script -->
+				<div class="col-lg-3">
+
+					<!-- Shop Sidebar -->
+					<div class="shop_sidebar">
+						<div class="sidebar_section">
+							<div class="sidebar_title">Categories</div>
+							<ul class="sidebar_categories" id="sidebar_categories_item">
+
 							</ul>
-							<div class="tabs_line"><span></span></div>
 						</div>
-						<div class="row">
-							<div class="col-lg-9" style="z-index:1;" id="product_panel_content">
-								<!-- to be filled by script -->
-							</div>
 
-							<div class="col-lg-3" id="arrival_single_item">
+						<!-- <div class="sidebar_section filter_by_section">
+							<div class="sidebar_title">Filter By</div>
+							<div class="sidebar_subtitle">Price</div>
+							<div class="filter_price">
+								<div id="slider-range" class="slider_range"></div>
+								<p>Range: </p>
+								<p><input type="text" id="amount" class="amount" readonly style="border:0; font-weight:bold;"></p>
 							</div>
-						</div>	
+						</div> -->
 					</div>
+
 				</div>
-			</div>
-		</div>		
-	</div>
 
-	<!-- Banner -->
+				<div class="col-lg-9">
+					
+					<!-- Shop Content -->
 
-	<div class="banner_2">
-			<div class="banner_2_background" style="background-image:url(images/banner_2_background.jpg)"></div>
-			<div class="banner_2_container">
-				<div class="banner_2_dots"></div>
-				<!-- Banner 2 Slider -->
-	
-				<div class="owl-carousel owl-theme banner_2_slider" id="banner_slider_item">
-					<!-- Item populated by script -->	
+					<div class="shop_content">
+						<div class="shop_bar clearfix">
+							<div class="shop_product_count"><span id="shop_product_count_value">0</span> products found</div>
+							<div class="shop_sorting">
+								<span>Sort by:</span>
+								<ul>
+									<li>
+										<span class="sorting_text">highest rated<i class="fas fa-chevron-down"></span></i>
+										<ul>
+											<li class="shop_sorting_button" data-isotope-option='{ "sortBy": "original-order" }'>highest rated</li>
+											<li class="shop_sorting_button" data-isotope-option='{ "sortBy": "name" }'>name</li>
+											<li class="shop_sorting_button"data-isotope-option='{ "sortBy": "price" }'>price</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="product_grid" id="product_item_content">
+							<div class="product_grid_border"></div>
+
+
+						</div>
+
+						<!-- Shop Page Navigation -->
+
+						<!-- <div class="shop_page_nav d-flex flex-row">
+							<div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
+							<ul class="page_nav d-flex flex-row">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">...</a></li>
+								<li><a href="#">21</a></li>
+							</ul>
+							<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
+						</div> -->
+
+					</div>
+
 				</div>
 			</div>
 		</div>
+	</div>
+
 
 	<!-- Brands -->
 
 	<div class="brands">
-		<div class="container">shop
+		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="brands_slider_container">
@@ -265,11 +286,9 @@
 						<!-- Brands Slider -->
 
 						<div class="owl-carousel owl-theme brands_slider">
-							
 							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands/all-link.jpg" alt=""></div></div>
 							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands/dcom.png" alt=""></div></div>
 							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands/schneider.png" alt=""></div></div>
-
 						</div>
 						
 						<!-- Brands Slider Navigation -->
@@ -332,14 +351,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/slick-1.8.0/slick.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/shop_custom.js"></script>
 <script src="js/google_spreadsheet.js"></script>
 
 <script>
 	$( document ).ready(function() {
-		loadCategorySidebar(1,1,0);
+		console.log("ready!");
+		loadCategorySidebar(1,0,1);
+		
+		var productPageNumber = getUrlParam('page','3');
+		loadProductPage(productPageNumber);
+
 	});
 </script>
 

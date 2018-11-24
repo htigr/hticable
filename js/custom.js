@@ -27,6 +27,8 @@
 
 
 ******************************/
+var spreadSheetLoaded = 0;
+var checkSpreadSheetTimer = 0;
 
 $(document).ready(function()
 {
@@ -43,24 +45,35 @@ $(document).ready(function()
 
 	setHeader();
 
-	initCustomDropdown();
-	initPageMenu();
-	initDealsSlider();
-	initTabLines();
-	initFeaturedSlider();
-	featuredSliderZIndex();
-	initPopularSlider();
-	initBanner2Slider();
-	initFavs();
-	initArrivalsSlider();
-	arrivalsSliderZIndex();
-	bestsellersSlider();
-	initTabs();
-	initTrendsSlider();
-	initReviewsSlider();
-	initViewedSlider();
-	initBrandsSlider();
-	initTimer();
+	checkSpreadSheetTimer = setInterval(checkSpreadsheetLoaded,100);
+
+	function checkSpreadsheetLoaded() {
+		if(spreadSheetLoaded) {
+			clearInterval(checkSpreadSheetTimer);
+			doInits();
+		}
+	}
+
+	function doInits() {
+		initCustomDropdown();
+		initPageMenu();
+		initDealsSlider();
+		initTabLines();
+		initFeaturedSlider();
+		featuredSliderZIndex();
+		initPopularSlider();
+		initBanner2Slider();
+		initFavs();
+		initArrivalsSlider();
+		arrivalsSliderZIndex();
+		bestsellersSlider();
+		initTabs();
+		initTrendsSlider();
+		initReviewsSlider();
+		initViewedSlider();
+		initBrandsSlider();
+		initTimer();	
+	}
 
 	$(window).on('resize', function()
 	{

@@ -16,6 +16,8 @@
 
 
 ******************************/
+var spreadSheetLoaded = 0;
+var checkSpreadSheetTimer = 0;
 
 $(document).ready(function()
 {
@@ -32,13 +34,24 @@ $(document).ready(function()
 
 	setHeader();
 
-	initCustomDropdown();
-	initPageMenu();
-	initViewedSlider();
-	initBrandsSlider();
-	initIsotope();
-	initPriceSlider();
-	initFavs();
+	checkSpreadSheetTimer = setInterval(checkSpreadsheetLoaded,100);
+
+	function checkSpreadsheetLoaded() {
+		if(spreadSheetLoaded) {
+			clearInterval(checkSpreadSheetTimer);
+			doInits();
+		}
+	}
+
+	function doInits() {
+		initCustomDropdown();
+		initPageMenu();
+		initViewedSlider();
+		initBrandsSlider();
+		initIsotope();
+		initPriceSlider();
+		initFavs();
+	}
 
 	$(window).on('resize', function()
 	{

@@ -117,41 +117,15 @@
 
 							<!-- Categories Menu -->
 
-							<div class="cat_menu_container">
+							<div class="cat_menu_container" id="category_menu_content">
 								<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
 									<div class="cat_burger"><span></span><span></span><span></span></div>
 									<div class="cat_menu_text">categories</div>
 								</div>
-
-								<ul class="cat_menu">
-									<li class="hassubs">
-										<a href="#">Fiber Optic <i class="fas fa-chevron-right ml-auto"></i></a>
-										<ul>
-											<li><a href="#">Cable<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Patch Cord<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Pigtail<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Connector / Adapter / Attenuator<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Distribution Box<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Media Converter<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Closure<i class="fas fa-chevron-right"></i></a></li>
-										</ul>
-									</li>
-									<li class="hassubs">
-										<a href="#">Cable <i class="fas fa-chevron-right"></i></a>
-										<ul>
-											<li><a href="#">Cat 5E<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Cat 6E<i class="fas fa-chevron-right"></i></a></li>
-										</ul>
-									</li>
-									<li class="hassubs">
-										<a href="#">Server Rack<i class="fas fa-chevron-right"></i></a>
-										<ul>
-											<li><a href="#">21U<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">42U<i class="fas fa-chevron-right"></i></a></li>
-										</ul>
-									</li>
-								</ul>
+								<!-- Content will be inserted via Javascript "google_spreadsheet.js" -->
+								
 							</div>
+
 
 							<!-- Main Nav Menu -->
 
@@ -162,7 +136,8 @@
 								</ul>
 							</div>
 
-							
+
+
 							<!-- Menu Trigger -->
 
 							<div class="menu_trigger_container ml-auto">
@@ -307,32 +282,6 @@
 					</div>
 				</div>
 
-				<div class="col-lg-2 offset-lg-2">
-					<div class="footer_column">
-						<div class="footer_title">Find it Fast</div>
-						<ul class="footer_list">
-							<li><a href="#">Fiber Optic Cable</a></li>
-							<li><a href="#">Fiber Optic Patch Cord</a></li>
-							<li><a href="#">Fiber Optic Pigtail</a></li>
-							<li><a href="#">Fiber Optic Connector / Adapter / Attenuator</a></li>
-							<li><a href="#">Fiber Optic Distribution Box</a></li>
-							<li><a href="#">Fiber Optic Cable Media Converter</a></li>
-							<li><a href="#">Fiber Optic Closure</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-lg-2">
-					<div class="footer_column">
-						<ul class="footer_list footer_list_2">
-							<li><a href="#">Cable Cat 5E</a></li>
-							<li><a href="#">Cable Cat 5E</a></li>
-							<li><a href="#">Server Rack 21 U</a></li>
-							<li><a href="#">Server Rack 42 U</a></li>
-						</ul>
-					</div>
-				</div>
-
 			</div>
 		</div>
 	</footer>
@@ -349,14 +298,6 @@
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
-						<div class="logos ml-sm-auto">
-							<ul class="logos_list">
-								<li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-								<li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-								<li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-								<li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -375,6 +316,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/easing/easing.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBsKpreXGCoMcahD9HNljTr-MVqTxhOzVs"></script>
 <script src="js/contact_custom.js"></script>
+<script src="js/google_spreadsheet.js"></script>
+
+<script>
+	$( document ).ready(function() {
+		console.log("ready!");
+		loadCategorySidebar(1,0,1);
+	});
+</script>
+
 </body>
 
 </html>
